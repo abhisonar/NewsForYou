@@ -1,0 +1,25 @@
+.carousel-inner {
+    height: 500px;
+}
+.carousel-item.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 400px;
+}
+.carousel-item .live-tv-link{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-item .live-tv-link >img{
+   width: 200px;
+}
+.carousel-control-prev-icon {
+    filter: brightness(1) invert(1);
+}
+.carousel-control-next-icon {
+    filter: brightness(1) invert(1);
+}

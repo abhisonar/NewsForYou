@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+}
+.card{
+    width: 18rem;
+    margin: 8px;
+    height: 30rem;
+    text-decoration: none;
+}
+.card .card-img-top{
+    width: 286px;
+    height: 168px;
+}

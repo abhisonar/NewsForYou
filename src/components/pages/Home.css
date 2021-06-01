@@ -1,0 +1,13 @@
+.card-group {
+    justify-content: center;
+}
+.random-news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.random-news .random-news-header{
+    justify-self: center;
+    color: var(--primary-color);
+}
