@@ -6,12 +6,12 @@ import Science from "./components/pages/Science";
 import Health from "./components/pages/Health";
 import Entertainment from "./components/pages/Entertainment";
 
-
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TopNav from './components/TopNav';
 import LiveTv from './components/pages/LiveTv';
 import Footer from './components/Footer';
+import Search from './components/pages/Search';
 
 function App() {
   return (
@@ -26,9 +26,10 @@ function App() {
           <Route path="/science" exact component={Science} />
           <Route path="/health" exact component={Health} />
           <Route path="/entertainment" exact component={Entertainment} />
-          <Route path="/live-tv" exact component={LiveTv} />
+          <Route path="/live-tv" component={LiveTv} />
+          <Route path="/search/:searchitem" component={Search} />
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );

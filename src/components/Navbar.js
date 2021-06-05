@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { OverlayTrigger, Popover, Tooltip, Badge } from "react-bootstrap";
+  import React, { useState } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import { OverlayTrigger,Tooltip } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Navbar.css";
 function Navbar() {
+  let history = useHistory();
   const [click, setClick] = useState(false);
+  const [search, setSearch] = useState('')
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const closeMobileMenu = () => {
+    setClick(false);
+  };
   const [colorChange, setColorChange] = useState(false);
 
   const changeNavbarColor = () => {
@@ -16,6 +20,14 @@ function Navbar() {
       setColorChange(false);
     }
   };
+
+  const updateChange = (event) => {
+    setSearch(event.target.value)
+  }
+  const updateSearch = (event) =>{
+    event.preventDefault()
+    history.push(`/search/${search}`)
+  }
   window.addEventListener("scroll", changeNavbarColor);
   const popover = (
     <Tooltip id="tooltip" className="tooltip">
@@ -66,7 +78,7 @@ function Navbar() {
             data-after="about"
           >
             <i className="fas fa-heartbeat"></i> health &nbsp;
-            <span class="badge bg-danger text-dark text-white">Trending</span>
+            <span className="badge bg-danger text-dark text-white">Trending</span>
           </NavLink>
         </li>
         <li className="mynav-item">
@@ -121,7 +133,7 @@ function Navbar() {
                     rootClose
                   >
                     <div className="mynav-links" data-after="all services">
-                      <i class="fas fa-list"></i> Categories
+                      <i className="fas fa-list"></i> Categories
                     </div>
                   </OverlayTrigger>
                 </li>
@@ -134,18 +146,23 @@ function Navbar() {
                     onClick={closeMobileMenu}
                     data-after="home"
                   >
-                    <i class="fas fa-tv"></i> Live Tv
+                    <i className="fas fa-tv"></i> Live Tv
                   </NavLink>
                 </li>
                 <li>
-                  <form action="" className="news-serch-form">
+                  <form
+                    action=""
+                    className="news-serch-form"
+                    onSubmit={updateSearch}
+                  >
                     <input
                       type="text"
                       className="news-search-bar"
                       placeholder=" Type To Search"
+                      onChange={updateChange}
                     />
                     <button className="search-btn">
-                      <i class="fas fa-search"></i>
+                      <i className="fas fa-search"></i>
                     </button>
                   </form>
                 </li>

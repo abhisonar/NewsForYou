@@ -20,7 +20,7 @@ function LiveTv() {
           <Switch>
             <Route
               path="/live-tv"
-              
+              exact
               render={() => (
                 <iframe
                   width="100%"
@@ -34,8 +34,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/ajtak"
-              
+              path="/live-tv/ajtak"
               render={() => (
                 <iframe
                   width="100%"
@@ -49,8 +48,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/cnbc"
-              
+              path="/live-tv/cnbc"
               render={() => (
                 <iframe
                   width="100%"
@@ -64,7 +62,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/india_today"
+              path="/live-tv/india_today"
               render={() => (
                 <iframe
                   width="100%"
@@ -78,8 +76,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/tv9"
-              
+              path="/live-tv/tv9"
               render={() => (
                 <iframe
                   width="100%"
@@ -93,8 +90,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/indiatv"
-              
+              path="/live-tv/indiatv"
               render={() => (
                 <iframe
                   width="100%"
@@ -108,8 +104,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/news_nation"
-              
+              path="/live-tv/news_nation"
               render={() => (
                 <iframe
                   width="100%"
@@ -123,8 +118,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/zeenews"
-              
+              path="/live-tv/zeenews"
               render={() => (
                 <iframe
                   width="100%"
@@ -138,8 +132,7 @@ function LiveTv() {
               )}
             />
             <Route
-              path="/abp"
-              
+              path="/live-tv/abp"
               render={() => (
                 <iframe
                   width="100%"
@@ -155,30 +148,30 @@ function LiveTv() {
           </Switch>
           <Carousel>
             <Carousel.Item interval={2000}>
-              <NavLink className="live-tv-link" to="/ajtak">
+              <NavLink exact className="live-tv-link" to="/live-tv/ajtak">
                 <img src={ajtak} alt="" className="d-block" />
               </NavLink>
-              <NavLink className="live-tv-link" to="/cnbc">
+              <NavLink exact className="live-tv-link" to="/live-tv/cnbc">
                 <img src={cnbc} alt="" className="d-block" />
               </NavLink>
-              <NavLink className="live-tv-link" to="/india_today">
+              <NavLink exact className="live-tv-link" to="/live-tv/india_today">
                 <img src={india_today} alt="" className="d-block" />
               </NavLink>
-              <NavLink className="live-tv-link" to="/tv9">
+              <NavLink exact className="live-tv-link" to="/live-tv/tv9">
                 <img src={tv9} alt="" className="d-block" />
               </NavLink>
             </Carousel.Item>
             <Carousel.Item interval={3000}>
-              <NavLink className="live-tv-link" to="/indiatv">
+              <NavLink exact className="live-tv-link" to="/live-tv/indiatv">
                 <img src={indiatv} alt="" className="d-block" />
               </NavLink>
-              <NavLink className="live-tv-link" to="/news_nation">
+              <NavLink exact className="live-tv-link" to="/live-tv/news_nation">
                 <img src={news_nation} alt="" className="d-block" />
               </NavLink>
-              <NavLink className="live-tv-link" to="/zeenews">
+              <NavLink exact className="live-tv-link" to="/live-tv/zeenews">
                 <img src={zeenews} alt="" className="d-block" />
               </NavLink>
-              <NavLink className="live-tv-link" to="/zeenews">
+              <NavLink exact className="live-tv-link" to="/live-tv/abp">
                 <img src={abp} alt="" className="d-block" />
               </NavLink>
             </Carousel.Item>

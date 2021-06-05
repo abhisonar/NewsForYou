@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.css";
-import { getByTitle } from '@testing-library/dom';
 import "./NewsCard.css"
 function NewsCard({
   title,

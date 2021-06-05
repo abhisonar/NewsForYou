@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import HeroSection from "../HeroSection";
 import NewsCard from "../NewsCard";
@@ -12,7 +13,7 @@ function Science() {
   const getnews = async () => {
     const API_TOKEN = "1ac5cbdb9f6ace37cad7240e4d005629";
     const response = await fetch(
-      `https://gnews.io/api/v4/search?q=science&token=${API_TOKEN}`
+      `https://gnews.io/api/v4/search?q=science&lang=en&country=in&token=${API_TOKEN}`
     );
     const data = await response.json();
     setNews(data.articles);

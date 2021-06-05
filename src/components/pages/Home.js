@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState,useEffect} from 'react'
 import HeroSection from '../HeroSection'
 import NewsCard from '../NewsCard';
@@ -17,7 +18,6 @@ function Home() {
       );
       const data = await response.json();
       setNews(data.articles);
-      console.log(news);
     };
     return (
       <div>

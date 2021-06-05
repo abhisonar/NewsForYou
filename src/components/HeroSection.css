@@ -43,7 +43,6 @@
 }
 #hero .hero .hero-header{
     display: flex;
-    position: absolute;
     flex-direction: column;
     text-transform: uppercase;
     justify-content:center;
@@ -57,7 +56,9 @@
     font-size: 1.9rem;
     color: #fff;
     font-weight: 600;
-    margin: 10px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 #hero .hero .hero-header .hero-head.blink{
     animation: blink 1s linear infinite;
