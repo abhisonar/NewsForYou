@@ -27,7 +27,7 @@ function Navbar() {
   const updateSearch = (event) =>{
     event.preventDefault()
     closeMobileMenu()
-    history.push(`/search/${search}`)
+    history.push(`/NewsForYou/search/${search}`);
   }
   window.addEventListener("scroll", changeNavbarColor);
   const popover = (
