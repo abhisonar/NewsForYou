@@ -20,7 +20,7 @@ function App() {
         <TopNav />
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/NewsForYou" exact component={Home} />
           <Route path="/sports" exact component={Sports} />
           <Route path="/tech" component={Tech} />
           <Route path="/science" exact component={Science} />

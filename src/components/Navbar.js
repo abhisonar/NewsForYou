@@ -26,6 +26,7 @@ function Navbar() {
   }
   const updateSearch = (event) =>{
     event.preventDefault()
+    closeMobileMenu()
     history.push(`/search/${search}`)
   }
   window.addEventListener("scroll", changeNavbarColor);
@@ -116,7 +117,7 @@ function Navbar() {
                 <li className="mynav-item">
                   <NavLink
                     exact
-                    to="/"
+                    to="/NewsForYou"
                     className="mynav-links"
                     activeClassName="active"
                     onClick={closeMobileMenu}

@@ -12,7 +12,7 @@ function Home() {
     },[])
 
   const getnews = async () => {
-      const API_TOKEN = "1ac5cbdb9f6ace37cad7240e4d005629";
+      const API_TOKEN = "fb661f99e8fb9d6752716256a05764f2";
       const response = await fetch(
         `https://gnews.io/api/v4/top-headlines?lang=en&country=in&token=${API_TOKEN}`
       );
