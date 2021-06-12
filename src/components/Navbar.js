@@ -36,7 +36,7 @@ function Navbar() {
         <li className="mynav-item">
           <NavLink
             exact
-            to="/sports"
+            to="/NewsForYou/sports"
             className="mynav-links"
             activeClassName="active"
             onClick={closeMobileMenu}
@@ -48,7 +48,7 @@ function Navbar() {
         <li className="mynav-item">
           <NavLink
             exact
-            to="/tech"
+            to="/NewsForYou/tech"
             className="mynav-links"
             activeClassName="active"
             onClick={closeMobileMenu}
@@ -60,7 +60,7 @@ function Navbar() {
         <li className="mynav-item">
           <NavLink
             exact
-            to="/science"
+            to="/NewsForYou/science"
             className="mynav-links"
             activeClassName="active"
             onClick={closeMobileMenu}
@@ -72,20 +72,22 @@ function Navbar() {
         <li className="mynav-item">
           <NavLink
             exact
-            to="/health"
+            to="/NewsForYou/health"
             className="mynav-links"
             activeClassName="active"
             onClick={closeMobileMenu}
             data-after="about"
           >
             <i className="fas fa-heartbeat"></i> health &nbsp;
-            <span className="badge bg-danger text-dark text-white">Trending</span>
+            <span className="badge bg-danger text-dark text-white">
+              Trending
+            </span>
           </NavLink>
         </li>
         <li className="mynav-item">
           <NavLink
             exact
-            to="/entertainment"
+            to="/NewsForYou/entertainment"
             className="mynav-links"
             activeClassName="active"
             onClick={closeMobileMenu}
@@ -141,7 +143,7 @@ function Navbar() {
                 <li className="mynav-item">
                   <NavLink
                     exact
-                    to="/live-tv"
+                    to="/NewsForYou/live-tv"
                     className="mynav-links"
                     activeClassName="active"
                     onClick={closeMobileMenu}

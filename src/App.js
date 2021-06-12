@@ -21,13 +21,17 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/NewsForYou" exact component={Home} />
-          <Route path="/sports" exact component={Sports} />
-          <Route path="/tech" component={Tech} />
-          <Route path="/science" exact component={Science} />
-          <Route path="/health" exact component={Health} />
-          <Route path="/entertainment" exact component={Entertainment} />
-          <Route path="/live-tv" component={LiveTv} />
-          <Route path="/search/:searchitem" component={Search} />
+          <Route path="/NewsForYou/sports" exact component={Sports} />
+          <Route path="/NewsForYou/tech" component={Tech} />
+          <Route path="/NewsForYou/science" exact component={Science} />
+          <Route path="/NewsForYou/health" exact component={Health} />
+          <Route
+            path="/NewsForYou/entertainment"
+            exact
+            component={Entertainment}
+          />
+          <Route path="/NewsForYou/live-tv" component={LiveTv} />
+          <Route path="/NewsForYou/search/:searchitem" component={Search} />
         </Switch>
         <Footer />
       </Router>
